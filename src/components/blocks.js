@@ -22,30 +22,7 @@ class Transactions extends Component {
     render(){
         return (
             <Container>
-                <h3 class="mt-5"><b>Bloques</b></h3>
-                
-                <Table responsive>
-                    <thead>
-                        <tr>
-                            <th>Nonce</th>
-                            <th>Timestamp</th>
-                            <th>Hash del bloque anterior</th>
-                            <th>Hash del bloque actual</th>
-                            <th>Numero de transacciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.transactions.slice(0).map(item => 
-                            <tr key={item}>
-                                <td><b>{item.Nonce}</b></td>
-                                <td><b>{item.timestamp}</b></td>
-                                <td><b>{item.hash_pointer}</b></td>
-                                <td><b>{item.id}</b></td>
-                                <td><b>{item.number_of_transactions}</b></td>
-                            </tr>
-                        )}        
-                    </tbody>
-                </Table>
+                <h3 class="mt-5"><b>SARC APP</b></h3>                
             </Container>
         )
     }

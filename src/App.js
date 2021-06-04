@@ -16,12 +16,7 @@ class App extends Component {
   render(){
     return(
       <div className="App">
-        <Status/>
-        <NewWallet/>
-        <Send/>
-        <Transactions/>
-        <Wallets/>
-        <Blocks/>
+        <Block/>
       </div>
     )
   }
