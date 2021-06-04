@@ -17,7 +17,7 @@ class newWallet extends Component {
     }
 
     handleName(event) {
-        
+        console.log('2')
         this.setState({ name: event.target.value });
     }
 
@@ -29,6 +29,7 @@ class newWallet extends Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault()
         console.log(getEndpoint+this.state.name+'/'+this.state.last_name)   
         axios.get(getEndpoint+this.state.name+'/'+this.state.last_name).
             then(res => {

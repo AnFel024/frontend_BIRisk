@@ -1,13 +1,14 @@
 FROM node:14.17.0
 # set working directory
-WORKDIR /app
+RUN mkdir /code
+WORKDIR /code
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH /code/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json ./code
+COPY package-lock.json ./code
 RUN npm install --silent --save
 RUN npm install create-react-app --silent --save
 RUN npm install react-scripts -g --silent --save
@@ -17,9 +18,9 @@ RUN npm install font-awesome -g --silent --save
 RUN npm install bootstrap -g --silent --save
 
 # add app
-COPY . ./
+COPY . ./code
 
-EXPOSE 8083
+EXPOSE 3000
 
 # start app
 CMD ["npm", "start"]

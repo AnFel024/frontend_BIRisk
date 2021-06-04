@@ -31,6 +31,7 @@ class Send extends Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault()
         console.log(getEndpoint+this.state.recipient+'/'+this.state.amount)   
         axios.get(getEndpoint+this.state.recipient+'/'+this.state.amount).
             then(res => {
